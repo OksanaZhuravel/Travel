@@ -1,0 +1,52 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+  &__item {
+    list-style-type: none;
+
+    &:nth-child(2)>a {
+      &::after {
+        content: "/";
+        margin: 0 20px 0 20px;
+      }
+    }
+  }
+
+  &__link {
+    margin: 0;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    color: #c5c5c5;
+
+    &--activ {
+      color: #000000;
+    }
+  }
+
+  &__svg {
+    margin: 0 30px 0 30px;
+
+    &--transform {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    &:nth-child(2)>a {
+      &::after {
+        content: "/";
+        margin: 0 10px 0 10px;
+      }
+    }
+
+    &__svg {
+      margin: 0 15px 0 15px;
+    }
+  }
+}

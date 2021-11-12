@@ -1,0 +1,43 @@
+.body {
+  width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "montserrat", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.14em;
+  background-color: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media (max-width: 480px) {
+  .body {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

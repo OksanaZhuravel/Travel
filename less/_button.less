@@ -1,0 +1,127 @@
+.button {
+  width: 294px;
+  padding: 12px;
+  display: block;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  color: #ffffff;
+
+  &:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: #4b18a8;
+    background-color: #7a8486;
+  }
+
+  // &:default {
+  //   color: gray;
+  //   background-color: #ffffff;
+  // }
+
+  &--about {
+    border: 1px solid #000000;
+    color: #000000;
+
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+
+  &--article {
+    width: 221px;
+    background-color: #dddcdc;
+    border: 2px solid #dddcdc;
+    box-sizing: border-box;
+  }
+
+  &--form {
+    width: 247px;
+    color: #ffffff;
+    background-color: #3a4047;
+
+    &:hover {
+      background-color: #26312c69;
+      color: #3a4047;
+    }
+  }
+
+  &__txt {
+    text-transform: uppercase;
+    font-size: 18px;
+    word-break: break-all;
+
+    &--article {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+      color: #000000;
+    }
+
+    &--form {
+      font-size: 22px;
+      letter-spacing: 0.14em;
+    }
+  }
+
+  &--show {
+    animation-name: booking;
+    animation-duration: 0.6s;
+  }
+}
+
+@keyframes booking {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-15px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 130px;
+    padding: 7px;
+
+    &--article {
+      width: 130px;
+      border: 1px;
+    }
+
+    &--form {
+      width: 235px;
+    }
+
+    &__txt {
+      font-size: 14px;
+
+      &--article {
+        font-size: 10px;
+      }
+
+      &--form {
+        font-size: 16px;
+      }
+    }
+  }
+}
